@@ -1,0 +1,95 @@
+#navBar
+{
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    
+}
+.logo
+{
+    width: 105px;
+}
+.navigation
+{
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    color: rgb(43, 43, 43);
+    
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.social
+{
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.itemsNavigation
+{
+    margin: 0px 15px;
+}
+.itemsSocial
+{
+    height: 18px;
+    margin-left: 35px;
+    opacity: 0.7;
+}
+.itemsSocial:hover
+{
+    height: 18px;
+    margin-left: 35px;
+    opacity: 0.9;
+}
+
+.itemsNavigation a
+{
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+}
+
+.itemsNavigation a:hover
+{
+    padding-bottom: 5px;
+    border-bottom: 1px rgb(87, 87, 87) solid;
+}
+
+.burger
+{
+    display: none;
+}
+
+.burger div
+{
+    height: 3px;
+    width: 30px;
+    margin: 8px;
+    background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 750px)
+{
+    .navigation, .social
+    {
+        display: none;
+    }
+    #navBar
+    {
+        justify-content: space-between;
+    }
+
+    .burger
+    {
+        display: block;
+    }
+}

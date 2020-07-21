@@ -1,0 +1,40 @@
+.photoPortfolio
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  width: 84%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4px;
+}
+  
+/* Create four equal columns that sits next to each other */
+
+
+.column {
+  flex: 25%;
+  max-width: 24%;
+  padding: 0 4px;
+}
+  
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 50%;
+    max-width: 48%;
+  }
+}
+

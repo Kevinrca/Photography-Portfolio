@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="fr">
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Style/Style.css" />
+        <link rel="stylesheet" href="Style/navbar.css"/>
+        <link rel="stylesheet" href="Style/contact.css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <title>Kévin Rocha - Contact</title>
+    </head>
+
+    <body>
+        <header id="navBar">
+            <a href="Portfolio.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+            <nav class="navigation">
+                <li class="itemsNavigation" class="navPortfolio"><a href="Portfolio.html">Portfolio</a></li>
+                <li class="itemsNavigation" class="navAbout"><a href="About.html">About</a></li>
+                <li class="itemsNavigation" class="navContact"><a href="Contact.html">Contact</a></li>
+            </nav>
+
+            <nav class="social">
+                <a href="mailto:contact@kevin-rocha.com"><img class="itemsSocial" src="images/logo-email.png" alt="email"></a>
+                <a href="https://www.instagram.com/kevin_rca" target="_blank"><img class="itemsSocial" src="images/logo-instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/Kevin_rca" target="_blank"><img class="itemsSocial" src="images/logo-twitter.png" alt="twitter"></a>
+            </nav>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        
+
+
+        
+        <div class="contactContent">
+            <div class="contactField">
+                
+                <div class="contactText">
+                    <h2>Contact</h2>
+                    <p>contact@kevin-rocha.com</p>
+                    <p>+33 (0)6 62 62 47 40</p>
+                </div>
+
+                <div class="contactForm">
+                    <form method="post" action="traitement.php">
+
+                        <div class="formPrenomNom">
+                            <div class="formPrenom">
+                                <div class="labellePrenom"><label for="prenom">Prénom</label></div>
+                                <input type="text" name="prenom" id="prenom" required>
+                            </div>
+
+                            <div class="formNom">
+                                <div class="labelleNom"><label for="nom">Nom</label></div>
+                                <input type="text" name="nom" id="nom" required>
+                            </div>
+                        </div>
+
+                        <div class="formTelephone">
+                            <div class="labelleTel"><label for="tel">Tél.</label></div>
+                            <input type="tel" name="tel" id="tel" required>
+                        </div>
+
+                        <div class="formEmail">
+                            <div class="labelleEmail"><label for="email">Email</label></div>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                        <div class="formMessage">
+                            <div class="labelleMessage"><label for="message">Message</label></div>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            
+            <img src="images/contact.jpg" alt="contact">
+        </div>
+
+
+
+
+        <footer class="footer">
+            <p class="textFooter">Kévin Rocha - 2020</p>
+            <div class="socialFooter">   
+                <a href="mailto:contact@kevin-rocha.com"><img class="itemsSocialFooter" src="images/logo-email.png" alt="email"></a>
+                <a href="https://www.instagram.com/kevin_rca" target="_blank"><img class="itemsSocialFooter" src="images/logo-instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/Kevin_rca" target="_blank"><img class="itemsSocialFooter" src="images/logo-twitter.png" alt="twitter"></a>
+            </div> 
+        </footer>
+
+
+    </body>
+</html>

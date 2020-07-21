@@ -1,0 +1,32 @@
+.aPropos
+{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.aPropos img
+{
+   max-width: 50%;
+   margin-right: 7%;
+
+}
+
+@media all and (max-width: 1300px)
+{
+    .aPropos
+    {
+        flex-direction: column-reverse;
+    }
+    .aPropos img
+    {
+        max-width: 100%;
+        width: auto;
+        margin-top: 30px;
+    }
+}
