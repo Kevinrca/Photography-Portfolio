@@ -1,72 +1,88 @@
-#navBar
+a
 {
-    height: 120px;
+    text-decoration: none;
+}
+
+
+.navBar
+{
+    height: 15vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     
     width: 83%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
-    
 }
+
 .logo
 {
     width: 105px;
 }
-.navigation
+
+
+.navItems
 {
-    font-family: poppins, sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+.pageLinks
+{
+    font-family: "poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 1.2em;
     color: rgb(43, 43, 43);
     
-    margin-left: 5%;
+    margin-right: auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
+.pageLinks a
+{
+    margin: 0px 15px;
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+}
+.pageLinks a:hover
+{
+    height: 18px;
+    opacity: 0.95;
+    padding-bottom: 5px;
+    border-bottom: 1px rgb(0, 0, 0) solid;
+}
+    
+
+
+
 .social
 {
-    margin-left: auto;
+    align-self: flex-end;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 }
-.itemsNavigation
-{
-    margin: 0px 15px;
-}
-.itemsSocial
+.social img
 {
     height: 18px;
     margin-left: 35px;
-    opacity: 0.7;
-}
-.itemsSocial:hover
-{
-    height: 18px;
-    margin-left: 35px;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
-.itemsNavigation a
-{
-    text-decoration: none;
-    color: rgb(58, 58, 58);
-}
 
-.itemsNavigation a:hover
-{
-    padding-bottom: 5px;
-    border-bottom: 1px rgb(87, 87, 87) solid;
-}
 
 .burger
 {
     display: none;
+    cursor: pointer;
 }
 
 .burger div
@@ -77,16 +93,64 @@
     background-color: rgb(0, 0, 0);
 }
 
+
+
 @media screen and (max-width: 750px)
 {
-    .navigation, .social
+    body
     {
-        display: none;
+        overflow-x: hidden;
     }
-    #navBar
+    
+    .navigation
     {
+        position: absolute;
+        right: 0;
+        top: 15vh;
+        height: 85vh;
+        width: 100%;
+        padding-top: 10vh;
+        
+        background-color: rgba(255, 255, 255, 0.95);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        transform: translateX(0%);
+        transition: transform 0.3s ease-out;
+    }
+    .navigation li {
+        margin: 30px;
+        font-weight: 500;
+    }
+
+
+
+    .social
+    {
+        
+        justify-self: flex-end;
+        margin: 0;
+
+        transform: translateX(0%);
+        transition: transform 0.3s ease-out;
+
+        
+    }
+    .itemsSocial
+    {
+        margin: 20px;
+    }
+
+    .navBar
+    {
+        width: 80%;
         justify-content: space-between;
+        align-items: center;
     }
+
 
     .burger
     {
