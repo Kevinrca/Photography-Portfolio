@@ -1,72 +1,87 @@
-#navBar
+a
 {
-    height: 120px;
+    text-decoration: none;
+}
+
+
+.navBar
+{
+    height: 15vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     
-    width: 83%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 82%;
+    margin: auto;
     margin-top: 1%;
-    
 }
+
 .logo
 {
     width: 105px;
 }
-.navigation
+
+
+.navItems
 {
-    font-family: poppins, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+
+
+
+.pageLinks
+{
+    font-family: "poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
     font-size: 1.2em;
     color: rgb(43, 43, 43);
     
-    margin-left: 5%;
+    margin: 10%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-.social
-{
-    margin-left: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-}
-.itemsNavigation
+.pageLinks a
 {
     margin: 0px 15px;
-}
-.itemsSocial
-{
-    height: 18px;
-    margin-left: 35px;
-    opacity: 0.7;
-}
-.itemsSocial:hover
-{
-    height: 18px;
-    margin-left: 35px;
-    opacity: 0.9;
-}
-
-.itemsNavigation a
-{
     text-decoration: none;
     color: rgb(58, 58, 58);
 }
-
-.itemsNavigation a:hover
+.pageLinks a:hover
 {
+    height: 18px;
+    opacity: 0.95;
+    color: black;
     padding-bottom: 5px;
-    border-bottom: 1px rgb(87, 87, 87) solid;
+    border-bottom: 1px rgb(0, 0, 0) solid;
 }
+
+
+
+
+.social img
+{
+    height: 18px;
+    margin: 17px;
+    opacity: 0.85;
+}
+.social img:hover
+{
+    opacity: 1;
+}
+
+
+
+
 
 .burger
 {
     display: none;
+    cursor: pointer;
 }
 
 .burger div
@@ -75,17 +90,56 @@
     width: 30px;
     margin: 8px;
     background-color: rgb(0, 0, 0);
+
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 750px)
+
+
+
+
+
+
+@media screen and (max-width: 870px)
 {
-    .navigation, .social
+    body
     {
-        display: none;
+        overflow-x: hidden;
     }
-    #navBar
+    
+    .navItems
     {
-        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 15vh;
+        height: 85vh;
+        width: 100%;
+        padding-top: 5vh;
+        
+        background-color: rgba(255, 255, 255, 0.95);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+    }
+    .pageLinks {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+    }
+    .pageLinks li
+    {
+        margin: 20px;
+        opacity: 0;
+    }
+
+    .social
+    {
+        opacity: 0;
     }
 
     .burger
@@ -93,3 +147,45 @@
         display: block;
     }
 }
+
+.navActive {
+    transform: translateX(0%);
+}
+
+
+@keyframes navItemsFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes socialFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-9px, -7px);
+}
+
