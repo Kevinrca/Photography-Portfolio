@@ -2,7 +2,7 @@ function navSlide() {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".navItems");
     const navItems = document.querySelectorAll(".pageLinks li");
-    const navSocial = document.querySelectorAll(".social a");
+    const navSocial = document.querySelectorAll(".social");
 
     burger.addEventListener('click', () => {
         
@@ -19,15 +19,15 @@ function navSlide() {
             }
         });
 
-        // social transition
         navSocial.forEach((link, index) => {
             if(link.style.animation) {
                 link.style.animation = "";
             }
             else {
-                link.style.animation = `socialFade 0.5s ease forwards ${index / 11 + 0.1}s`;
+                link.style.animation = `navItemsFade 0.5s ease forwards ${index / 11 + 0.4}s`;
             }
         });
+
 
         //Burger transition
         burger.classList.toggle("toggle");
