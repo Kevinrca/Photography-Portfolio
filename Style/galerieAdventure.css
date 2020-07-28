@@ -1,0 +1,73 @@
+.adventures
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+
+    width: 83%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 180px;
+}
+
+/*  COVERS  */
+
+.galerieCoverContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.galerieCoverContainer img {
+    width: 100%;
+    z-index: 1;
+}
+
+.galerieCoverText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    opacity: 0;
+    transition: all 0.15s ease;
+
+}
+.galerieCoverContainer:hover .galerieCoverText{
+    opacity: 1;
+}
+
+.galerieCoverText h3
+{
+    color: rgb(29, 29, 29);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.galerieCoverText p {
+    color: rgb(36, 36, 36);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1000px) {
+    .adventures {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 1%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .adventures {
+        grid-template-columns: 1fr;
+        margin-bottom: 50%;
+    }
+}
+
+
