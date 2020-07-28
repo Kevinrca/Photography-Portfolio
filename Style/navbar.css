@@ -27,7 +27,7 @@ a
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 100%;
 }
 
 
@@ -44,12 +44,14 @@ a
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 .pageLinks a
 {
     margin: 0px 15px;
     text-decoration: none;
     color: rgb(58, 58, 58);
+    
 }
 .pageLinks a:hover
 {
@@ -61,10 +63,15 @@ a
 }
 
 
-
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .social img
 {
+
     height: 18px;
     margin: 17px;
     opacity: 0.85;
@@ -100,7 +107,7 @@ a
 
 
 
-@media screen and (max-width: 870px)
+@media screen and (max-width: 800px)
 {
     body
     {

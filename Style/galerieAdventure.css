@@ -19,7 +19,6 @@
 }
 .galerieCoverContainer img {
     width: 100%;
-    z-index: 1;
 }
 
 .galerieCoverText {
@@ -35,7 +34,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000;
 
     opacity: 0;
     transition: all 0.15s ease;
