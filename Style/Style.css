@@ -40,16 +40,19 @@ footer
 
 footer p
 {
-    font-family: poppins, sans-serif;
+    display: block;
+    font-family: "poppins", sans-serif;
     font-weight: 300;
     font-size: 1.3em;
     margin-top: -11px;
+
+    text-align: center;
 }
 
 .itemsSocialFooter
 {
     height: 18px;
-    margin-left: 35px;
+    margin: 16px;
     opacity: 0.7;
 }
 
@@ -59,3 +62,11 @@ footer p
     margin-left: 35px;
     opacity: 0.9;
 }
+
+@media all and (max-width: 600px) {
+    .footer {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
