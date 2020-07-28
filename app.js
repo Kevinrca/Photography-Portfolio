@@ -24,7 +24,7 @@ function navSlide() {
                 link.style.animation = "";
             }
             else {
-                link.style.animation = `navItemsFade 0.5s ease forwards ${index / 11 + 0.4}s`;
+                link.style.animation = `navItemsFade 0.5s ease forwards ${index / 11 + 0.5}s`;
             }
         });
 
