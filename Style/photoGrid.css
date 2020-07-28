@@ -1,40 +1,35 @@
-.photoPortfolio
-{
-  margin-left: auto;
-  margin-right: auto;
+
+.gridContainer {
+  margin: auto;
+  width: 82%;
+
+  margin-top: 100px;
 }
 
-.galerie {
-  display: flex;
-  flex-wrap: wrap;
-  width: 84%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 4px;
+.grid-item {
+  width: 24%;
 }
-  
-/* Create four equal columns that sits next to each other */
 
-
-.column {
-  flex: 25%;
-  max-width: 24%;
-  padding: 0 4px;
-}
-  
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.grid-item img {
   width: 100%;
+  margin-bottom: 3px;
 }
 
 
-
-@media screen and (max-width: 1000px) {
-  .column {
-    flex: 50%;
-    max-width: 48%;
+@media all and (max-width: 1200px) {
+  .grid-item {
+    width: 32%;
   }
 }
 
+@media all and (max-width: 800px) {
+  .grid-item {
+    width: 49%;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .grid-item {
+    width: 100%;
+  }
+}
