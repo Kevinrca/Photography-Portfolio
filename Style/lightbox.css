@@ -1,0 +1,37 @@
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+    
+}
+.lightbox img {
+    max-height: 90%;
+    max-width: 90%;
+    z-index: 101;
+}
+.lightbox .nextImage {
+    position: absolute;
+    right: 30px;
+    top: 50vh;
+    margin-top: -5px;
+}
+.lightbox .prevImage {
+    position: absolute;
+    left: 30px;
+    top: 50vh;
+    margin-top: -5px;
+}
+.lightbox .closeLightbox {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
