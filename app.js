@@ -45,7 +45,7 @@ var elem = document.querySelector('.grid');
 });
 
 
-
+/*
 
 // ANIMATION
 
@@ -88,3 +88,4 @@ function isElementInViewport(el) {
   );
 }
 
+*/
