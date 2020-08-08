@@ -16,12 +16,12 @@
 .lightbox img {
     max-height: 90%;
     max-width: 80%;
-    z-index: 101;
+    z-index: 10;
 }
 
 
 
-.lightbox .closeLightbox {
+.closeLightbox {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -30,33 +30,67 @@
 
     height: 35px;
     cursor: pointer;
+    z-index: 12;
+
+    transition: opacity 0.1s ease;
+}
+.closeLightbox:hover {
+    opacity: 0.9;
 }
 
-.lightbox .nextImage {
+
+
+
+
+.nextButton, .prevButton {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nextButton {
     position: absolute;
-    right: 0.5%;
+    right: 0;
+}
+.prevButton {
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+.next {
+    position: absolute;
+    right: 5%;
     top: 50vh;
-    margin-top: -5px;
-    padding: 10px;
-    opacity: 0.6;
+    margin-top: -15px;
+    opacity: 0;
 
     height: 40px;
     transform: rotate(270deg);
 
-    cursor: pointer;
+    transition: opacity 0.1s ease;
 }
 
-.lightbox .prevImage {
+.prev {
     position: absolute;
-    left: 0.5%;
+    left: 5%;
     top: 50vh;
-    margin-top: -5px;
-    padding: 10px;
-    opacity: 0.6;
+    margin-top: -15px;
+    opacity: 0;
 
     height: 40px;
     transform: rotate(90deg);
 
-    cursor: pointer;
-    
+    transition: opacity 0.1s ease;
+}
+.nextButton:hover .next {
+    opacity: 0.8;
+}
+.prevButton:hover .prev {
+    opacity: 0.8;
 }
