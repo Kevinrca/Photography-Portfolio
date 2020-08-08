@@ -49,6 +49,45 @@ var elem = document.querySelector('.grid');
 
 
 
+// LIGHTBOX
+const LIGHTBOX = document.querySelector(".lightbox");
+
+const imageGalerieArray = [];
+const imageGalerie = document.querySelectorAll(".galerieImage");
+
+imageGalerie.forEach( element => {
+  imageGalerieArray.push(element);
+});
+
+
+for(let i = 0; i < imageGalerieArray.length; i++) {
+  imageGalerieArray[i].addEventListener("click", () => {
+    
+    LIGHTBOX.classList.add("lightboxActive");
+  })
+}
+
+
+
+const nextButton = document.querySelector(".nextButton");
+const prevButton = document.querySelector(".prevButton");
+const closeButton = document.querySelector(".closeLightbox");
+
+nextButton.addEventListener("click", () => {
+  console.log("next");
+});
+
+prevButton.addEventListener("click", () => {
+  console.log("prev");
+});
+
+closeButton.addEventListener("click", () => {
+  console.log("close");
+});
+
+
+
+
 
 /*
 

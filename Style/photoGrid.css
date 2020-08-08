@@ -8,8 +8,6 @@
 
 .grid-item {
   width: 24%;
-
-  transform: translateY(50px);
 }
 
 .grid-item img {
