@@ -5,21 +5,28 @@
     height: 100%;
     width: 100%;
 
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: rgba(255, 255, 255, 0.97);
     z-index: 100;
+
+    opacity: 1;
+
+    transition: opacity 0.3s ease;
     
 }
-.lightboxActive {
-    display: flex;
+.lightbox.fadeOut {
+    opacity: 0;
 }
-
-
-
-
+.lightbox .imageContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .lightbox img {
 
