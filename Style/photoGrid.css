@@ -14,6 +14,9 @@
   width: 100%;
   margin-bottom: 3px;
 }
+.grid-item img:hover {
+  cursor: pointer;
+}
 
 
 
