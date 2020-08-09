@@ -5,21 +5,28 @@
     height: 100%;
     width: 100%;
 
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: rgba(255, 255, 255, 0.97);
     z-index: 100;
+
+    opacity: 1;
+
+    transition: opacity 0.3s ease;
     
 }
-.lightboxActive {
-    display: flex;
+.lightbox.fadeOut {
+    opacity: 0;
 }
-
-
-
-
+.lightbox .imageContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .lightbox img {
 
@@ -34,12 +41,20 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    padding: 10px;
-    opacity: 0.6;
+    height: 30px;
+    width: 30px;
+    padding: 15px;
 
-    height: 35px;
+    background: url(../Images/lightbox/cross.png) center center / 100%;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    text-indent: -50000px;
+
     cursor: pointer;
     z-index: 12;
+
+    opacity: 0.6;
 
     transition: opacity 0.1s ease;
 }
@@ -58,6 +73,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 11;
 }
 
 .nextButton {
@@ -76,30 +92,68 @@
     position: absolute;
     right: 5%;
     top: 50vh;
-    margin-top: -15px;
+    margin-top: -20px;
     opacity: 0;
+    
+    background: url(../Images/lightbox/arrow.png) center center / 100% no-repeat;
+    border: none;
+    outline: none;
+    text-indent: -50000px;
 
     height: 40px;
+    width: 30px;
     transform: rotate(270deg);
 
     transition: opacity 0.1s ease;
+}
+.next:hover {
+    cursor: pointer;
 }
 
 .prev {
     position: absolute;
     left: 5%;
     top: 50vh;
-    margin-top: -15px;
+    margin-top: -20px;
     opacity: 0;
+    
+    background: url(../Images/lightbox/arrow.png) center center / 100% no-repeat;
+    border: none;
+    outline: none;
+    text-indent: -50000px;
+    z-index: 10;
 
     height: 40px;
+    width: 30px;
     transform: rotate(90deg);
 
     transition: opacity 0.1s ease;
 }
+.prev:hover {
+    cursor: pointer;
+}
+
+
 .nextButton:hover .next {
     opacity: 0.8;
 }
 .prevButton:hover .prev {
     opacity: 0.8;
+}
+
+
+
+.lightbox img {
+    opacity: 0;
+
+    animation: lightboxImageTransition 0.5s ease 0s both;
+}
+
+@keyframes lightboxImageTransition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
