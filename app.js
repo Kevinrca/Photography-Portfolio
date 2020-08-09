@@ -54,24 +54,23 @@ const LIGHTBOX = document.querySelector(".lightbox");
 const imageGalerie = document.querySelectorAll(".galerieImage");
 const imageGalerieArray = [];
 
-const lightboxImage = document.createElement('img'); // Image dans la lightbox
+const lightboxImage = document.createElement('img');  // Image dans la lightbox
 
 imageGalerie.forEach( element => {
-  const src = element.getAttribute('src'); // Récupère la source de l'image
-  imageGalerieArray.push(src); // Mettre la source de l'image dans l'array
+  const src = element.getAttribute('src');    // Récupère la source de l'image
+  imageGalerieArray.push(src);                // Mettre la source de l'image dans l'array
+  
 
   element.addEventListener("click", event => {
     event.preventDefault();
 
-    LIGHTBOX.classList.add("lightboxActive"); // Faire apparaitre la lightbox
+    LIGHTBOX.classList.add("lightboxActive");       // Faire apparaitre la lightbox
     
-    lightboxImage.setAttribute("src", src); // Donner le src de l'image original à l'image de la lightbox
+    lightboxImage.setAttribute("src", src);         // Donner le src de l'image original à l'image de la lightbox
 
     LIGHTBOX.appendChild(lightboxImage);
   })
 });
-
-
 
 
 // Boutons de la lightbox
@@ -79,12 +78,44 @@ const nextButton = document.querySelector(".nextButton");
 const prevButton = document.querySelector(".prevButton");
 const closeButton = document.querySelector(".closeLightbox");
 
+
+// NEXT BUTTON
 nextButton.addEventListener("click", () => {
-  console.log("next");
+  // Récuperer la src de l'image actuellement affiché dans la lightbox
+  const currentImageSrc = lightboxImage.getAttribute("src"); 
+
+  // Récupérer l'index de l'image actuel dans l'array
+  let currentImageIndex = imageGalerieArray.indexOf(currentImageSrc); 
+
+
+  if(currentImageIndex === imageGalerieArray.length - 1) {
+    currentImageIndex = 0;
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+  else {
+    currentImageIndex++
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
 });
 
+
+
+// PREV BUTTON
 prevButton.addEventListener("click", () => {
-  console.log("prev");
+  const currentImageSrc = lightboxImage.getAttribute("src"); 
+
+  // Récupérer l'index de l'image actuel dans l'array
+  let currentImageIndex = imageGalerieArray.indexOf(currentImageSrc); 
+
+  if(currentImageIndex === 0) {
+    currentImageIndex = imageGalerieArray.length - 1;
+    
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+  else {
+    currentImageIndex--;
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
 });
 
 
@@ -95,6 +126,41 @@ closeButton.addEventListener("click", () => {
 });
 
 
+
+
+function nextImage() {
+  const currentImageSrc = lightboxImage.getAttribute("src"); 
+
+  // Récupérer l'index de l'image actuel dans l'array
+  let currentImageIndex = imageGalerieArray.indexOf(currentImageSrc); 
+
+
+  if(currentImageIndex === imageGalerieArray.length - 1) {
+    currentImageIndex = 0;
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+  else {
+    currentImageIndex++
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+}
+
+function prevImage() {
+  const currentImageSrc = lightboxImage.getAttribute("src"); 
+
+  // Récupérer l'index de l'image actuel dans l'array
+  let currentImageIndex = imageGalerieArray.indexOf(currentImageSrc); 
+  
+  if(currentImageIndex === 0) {
+    currentImageIndex = imageGalerieArray.length - 1;
+    
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+  else {
+    currentImageIndex--;
+    lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
+  }
+}
 
 
 
