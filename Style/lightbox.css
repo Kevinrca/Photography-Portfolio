@@ -133,3 +133,20 @@
 .prevButton:hover .prev {
     opacity: 0.8;
 }
+
+
+
+.lightbox img {
+    opacity: 0;
+
+    animation: lightboxImageTransition 0.5s ease 0s both;
+}
+
+@keyframes lightboxImageTransition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

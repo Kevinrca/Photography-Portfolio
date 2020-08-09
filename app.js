@@ -82,6 +82,8 @@ const closeButton = document.querySelector(".closeLightbox");
 // NEXT BUTTON
 nextButton.addEventListener("click", () => {
   // Récuperer la src de l'image actuellement affiché dans la lightbox
+  LIGHTBOX.removeChild(lightboxImage);
+
   const currentImageSrc = lightboxImage.getAttribute("src"); 
 
   // Récupérer l'index de l'image actuel dans l'array
@@ -96,12 +98,16 @@ nextButton.addEventListener("click", () => {
     currentImageIndex++
     lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
   }
+
+  LIGHTBOX.appendChild(lightboxImage);
 });
 
 
 
 // PREV BUTTON
 prevButton.addEventListener("click", () => {
+  LIGHTBOX.removeChild(lightboxImage);
+
   const currentImageSrc = lightboxImage.getAttribute("src"); 
 
   // Récupérer l'index de l'image actuel dans l'array
@@ -116,6 +122,8 @@ prevButton.addEventListener("click", () => {
     currentImageIndex--;
     lightboxImage.setAttribute("src", imageGalerieArray[currentImageIndex]);
   }
+
+  LIGHTBOX.appendChild(lightboxImage);
 });
 
 
