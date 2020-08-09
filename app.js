@@ -51,24 +51,30 @@ var elem = document.querySelector('.grid');
 
 // LIGHTBOX
 const LIGHTBOX = document.querySelector(".lightbox");
-
-const imageGalerieArray = [];
 const imageGalerie = document.querySelectorAll(".galerieImage");
+const imageGalerieArray = [];
+
+const lightboxImage = document.createElement('img'); // Image dans la lightbox
 
 imageGalerie.forEach( element => {
-  imageGalerieArray.push(element);
+  const src = element.getAttribute('src'); // Récupère la source de l'image
+  imageGalerieArray.push(src); // Mettre la source de l'image dans l'array
+
+  element.addEventListener("click", event => {
+    event.preventDefault();
+
+    LIGHTBOX.classList.add("lightboxActive"); // Faire apparaitre la lightbox
+    
+    lightboxImage.setAttribute("src", src); // Donner le src de l'image original à l'image de la lightbox
+
+    LIGHTBOX.appendChild(lightboxImage);
+  })
 });
 
 
-for(let i = 0; i < imageGalerieArray.length; i++) {
-  imageGalerieArray[i].addEventListener("click", () => {
-    
-    LIGHTBOX.classList.add("lightboxActive");
-  })
-}
 
 
-
+// Boutons de la lightbox
 const nextButton = document.querySelector(".nextButton");
 const prevButton = document.querySelector(".prevButton");
 const closeButton = document.querySelector(".closeLightbox");
@@ -81,8 +87,11 @@ prevButton.addEventListener("click", () => {
   console.log("prev");
 });
 
+
 closeButton.addEventListener("click", () => {
-  console.log("close");
+  LIGHTBOX.classList.remove("lightboxActive");
+
+  LIGHTBOX.removeChild(lightboxImage);
 });
 
 
