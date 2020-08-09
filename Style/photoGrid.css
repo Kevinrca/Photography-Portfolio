@@ -8,9 +8,6 @@
 
 .grid-item {
   width: 24%;
-
-  transform: translateY(50px);
-  opacity: 0;
 }
 
 .grid-item img {
@@ -18,28 +15,9 @@
   margin-bottom: 3px;
 }
 
-.first-images {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.is-visible {
-  animation: isVisible 0.5s 0.1s ease-out both;
-}
 
 
 
-
-@keyframes isVisible {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 
 
