@@ -45,7 +45,7 @@
     width: 30px;
     padding: 15px;
 
-    background: url(../Images/lightbox/cross.png) center center / 100%;
+    background: url(../../Images/lightbox/cross.png) center center / 100%;
     background-repeat: no-repeat;
     border: none;
     outline: none;
@@ -95,7 +95,7 @@
     margin-top: -20px;
     opacity: 0;
     
-    background: url(../Images/lightbox/arrow.png) center center / 100% no-repeat;
+    background: url(../../Images/lightbox/arrow.png) center center / 100% no-repeat;
     border: none;
     outline: none;
     text-indent: -50000px;
@@ -117,11 +117,11 @@
     margin-top: -20px;
     opacity: 0;
     
-    background: url(../Images/lightbox/arrow.png) center center / 100% no-repeat;
+    background: url(../../Images/lightbox/arrow.png) center center / 100% no-repeat;
     border: none;
     outline: none;
     text-indent: -50000px;
-    z-index: 10;
+    z-index: 11;
 
     height: 40px;
     width: 30px;
