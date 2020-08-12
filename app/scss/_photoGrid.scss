@@ -1,46 +1,22 @@
 
-.gridContainer {
+.grid {
     margin: auto;
     width: 82%;
   
     margin-top: 100px;
-  }
+}
+
   
-  .grid-item {
-    width: 24%;
-  }
-  
-  .grid-item img {
-    width: 100%;
-    margin-bottom: 3px;
-  }
-  .grid-item img:hover {
-    cursor: pointer;
-  }
-  
-  
-  
+.grid-item img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+
+.grid-item img:hover {
+  cursor: pointer;
+}
   
   
-  
-  
-  
-  
-  
-  @media all and (max-width: 1200px) {
-    .grid-item {
-      width: 32%;
-    }
-  }
-  
-  @media all and (max-width: 800px) {
-    .grid-item {
-      width: 49%;
-    }
-  }
-  
-  @media all and (max-width: 570px) {
-    .grid-item {
-      width: 100%;
-    }
-  }
