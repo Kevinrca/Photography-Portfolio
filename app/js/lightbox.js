@@ -1,13 +1,5 @@
-
-
 const imageGalerie = document.querySelectorAll(".galerieImage");
 const imageGalerieArray = [];
-
-
-
-
-
-
 
 class Lightbox {
     
@@ -26,7 +18,6 @@ class Lightbox {
         })
     }
     
-    
     constructor(url) {
         this.url = url;
         this.element = this.buildDOM();
@@ -36,7 +27,6 @@ class Lightbox {
         this.onKeyUp = this.onKeyUp.bind(this);
         document.addEventListener("keyup", this.onKeyUp);
     }
-
 
     buildDOM = () => {
         const lightboxDOM = document.createElement("div");
@@ -72,7 +62,6 @@ class Lightbox {
         imageContainer.innerHTML = "";
         imageContainer.appendChild(image);
     }
-
 
     close = (e) => {
         e.preventDefault();
